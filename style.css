@@ -62,7 +62,7 @@ h1 {
 }
 
 /* BUTTON */
-button {
+.btn {
     background-color: rgb(251,165,63);
     color: #fff;
     padding: 0.4rem 0.5rem;
@@ -79,7 +79,7 @@ button {
     transition: transform 0.3s ease;
 }
 
-button:hover {
+.btn:hover {
     transform: scale(1.05);
 }
 
