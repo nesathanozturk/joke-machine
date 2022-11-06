@@ -1,17 +1,15 @@
-// ELEMENTS
+// ELEMENTS:
 const jokeQuestion = document.getElementById("joke_question");
 const jokeAnswer = document.getElementById("joke_answer");
 const generateBtn = document.getElementById("generateBtn");
 
-// FUNCTIONS:
-generateBtn.addEventListener("click", generateJoke);
+// FUNCTION:
 generateJoke();
 
-function generateJoke() {
-    fetch("https://official-joke-api.appspot.com/random_joke")
-    .then((res) => res.json())
-    .then((data) => {
-        jokeQuestion.innerHTML = data.setup;
-        jokeAnswer.innerHTML = data.punchline;
-    });
+generateBtn.addEventListener("click", generateJoke);
+async function generateJoke() {
+    const JOKE_API = await fetch("https://official-joke-api.appspot.com/random_joke");
+    const jokes = await JOKE_API.json();
+    jokeQuestion.innerHTML = jokes.setup;
+    jokeAnswer.innerHTML = jokes.punchline;
 };
