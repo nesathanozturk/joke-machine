@@ -8,7 +8,7 @@
 <li>Javascript</li>
 
 <br>
-**Installation**
+<h1>Installation</h1>
 
  `$ git clone https://github.com/nesathanozturk/joke-machine.git`
 
